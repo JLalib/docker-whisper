@@ -77,7 +77,7 @@ La app elimina diariamente a las 00:00 todos los archivos temporales en `uploads
 ## 🧠 Créditos
 
 - Basado en [Whisper](https://github.com/openai/whisper)
-- Proyecto personalizado por Javier Cascallana
+
 
 
 
