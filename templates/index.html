@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Transcripción y Traducción de Vídeos con la IA</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Transcripción Automática de Vídeos</h1>
+    <p class="subtitle">Transcribe y traduce vídeos en Español, Inglés o Portugués fácilmente.</p>
+    <form id="uploadForm" method="POST" enctype="multipart/form-data" action="/upload">
+      <div class="form-group">
+        <label for="fileInput">Selecciona un archivo de vídeo:</label>
+        <input type="file" accept=".mp4, .avi, .mkv" id="fileInput" name="file" required>
+        <small>Formatos aceptados: MP4, AVI y MKV</small>
+
+      </div>
+      <div class="form-group">
+        <label for="languageSelect">Idioma de transcripción:</label>
+        <select id="languageSelect" name="language" required>
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+             <option value="pt">Portugués</option>
+        </select>
+
+      </div>
+      <button type="submit">📤 Subir y transcribir </button>
+
+    </form>
+
+    <div id="progressWrapper" style="display: none;">
+  <div class="spinner"></div>
+  <progress id="progressBar" value="0" max="100"></progress>
+  <div id="waitMessage">Por favor, espere a que termine la transcripción. No cierre ni recargue la página.</div>
+</div>
+
+
+
+    <div id="status"></div>
+  </div>
+  <script src="static/script.js"></script>
+</body>
+</html>
+

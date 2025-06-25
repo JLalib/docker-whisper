@@ -1,0 +1,14 @@
+services:
+  flaskapp:
+    container_name: whisper_flask
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./results:/app/results
+      - ./static:/app/static
+      - ./templates:/app/templates
+    environment:
+      - FLASK_ENV=development
+
